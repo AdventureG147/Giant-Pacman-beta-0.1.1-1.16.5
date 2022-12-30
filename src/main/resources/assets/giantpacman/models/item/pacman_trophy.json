@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "": {
+    "model": "giantpacman:block/pacman_trophy"
+  }
+}
