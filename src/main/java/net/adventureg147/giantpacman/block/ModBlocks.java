@@ -1,6 +1,7 @@
 package net.adventureg147.giantpacman.block;
 
 import net.adventureg147.giantpacman.GiantPacman;
+import net.adventureg147.giantpacman.block.custom.PacmanTrophyBlock;
 import net.adventureg147.giantpacman.item.ModItemGroup;
 import net.adventureg147.giantpacman.item.ModItems;
 import net.minecraft.block.AbstractBlock;
@@ -32,7 +33,7 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> PACMAN_TROPHY =
             registerBlock("pacman_trophy",
-                    () -> new Block(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    () -> new PacmanTrophyBlock(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                             .hardnessAndResistance(3f).notSolid()));
 
 
