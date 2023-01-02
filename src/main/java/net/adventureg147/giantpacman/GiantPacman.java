@@ -5,6 +5,8 @@ import net.adventureg147.giantpacman.entity.ModEntityTypes;
 import net.adventureg147.giantpacman.item.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -59,7 +61,9 @@ public class GiantPacman
 
     private void doClientStuff(final FMLClientSetupEvent event) {
         // do something that can only be done on the client
-        LOGGER.info("Got game settings {}", event.getMinecraftSupplier().get());
+        event.enqueueWork(() -> {
+            RenderTypeLookup.setRenderLayer(ModBlocks.PACMAN_TROPHY.get(), RenderType.getCutout());
+        });
     }
 
     private void enqueueIMC(final InterModEnqueueEvent event)

@@ -10,18 +10,18 @@ import net.minecraft.block.Blocks;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
+import net.minecraft.util.IntArray;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.shapes.ISelectionContext;
 import net.minecraft.util.math.shapes.VoxelShape;
+import net.minecraft.util.math.shapes.VoxelShapeCube;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
-
-import javax.naming.Context;
 import javax.swing.text.html.BlockView;
-import java.awt.*;
 import java.util.function.Supplier;
+import java.util.function.ToIntFunction;
 
 
 public class ModBlocks {
@@ -33,12 +33,8 @@ public class ModBlocks {
     public static final RegistryObject<Block> PACMAN_TROPHY =
             registerBlock("pacman_trophy",
                     () -> new Block(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
-                            .hardnessAndResistance(3f)));
-    private static VoxelShape SHAPE = Block.makeCuboidShape();
+                            .hardnessAndResistance(3f).notSolid()));
 
-    public VoxelShape getShape(BlockState state, BlockView world, BlockPos pos, ISelectionContext context) {
-        return SHAPE;
-    }
 
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block) {
          RegistryObject<T> toReturn = BLOCKS.register(name, block);
