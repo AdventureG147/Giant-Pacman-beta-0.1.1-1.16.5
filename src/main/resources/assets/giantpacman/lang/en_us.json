@@ -1,5 +1,6 @@
 {
   "item.giantpacman.placeholder": "Placeholder",
   "block.giantpacman.pacman_trophy": "Pacman Trophy",
-  "itemGroup.pacmanModTab": "Giant Pacman Mod"
+  "itemGroup.pacmanModTab": "Giant Pacman Mod",
+  "block.giantpacman.golden_pacman_trophy": "Golden Pacman Trophy"
 }

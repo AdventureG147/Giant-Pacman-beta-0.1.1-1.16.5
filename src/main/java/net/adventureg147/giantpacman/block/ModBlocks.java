@@ -1,6 +1,7 @@
 package net.adventureg147.giantpacman.block;
 
 import net.adventureg147.giantpacman.GiantPacman;
+import net.adventureg147.giantpacman.block.custom.GoldenTrophyBlock;
 import net.adventureg147.giantpacman.block.custom.PacmanTrophyBlock;
 import net.adventureg147.giantpacman.item.ModItemGroup;
 import net.adventureg147.giantpacman.item.ModItems;
@@ -35,6 +36,10 @@ public class ModBlocks {
             registerBlock("pacman_trophy",
                     () -> new PacmanTrophyBlock(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                             .hardnessAndResistance(3f).notSolid()));
+    public static final RegistryObject<Block> GOLDEN_TROPHY =
+            registerBlock("golden_pacman_trophy", () -> new
+                    GoldenTrophyBlock(AbstractBlock.Properties
+                    .create(Material.MISCELLANEOUS).hardnessAndResistance(3f).notSolid()));
 
 
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block) {

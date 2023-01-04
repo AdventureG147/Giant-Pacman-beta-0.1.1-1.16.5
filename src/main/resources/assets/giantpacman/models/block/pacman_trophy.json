@@ -190,8 +190,8 @@
 			}
 		},
 		{
-			"from": [3, 6, 3],
-			"to": [4, 7, 4],
+			"from": [4, 6, 3],
+			"to": [5, 7, 4],
 			"rotation": {"angle": 22.5, "axis": "x", "origin": [8, 7, 15]},
 			"faces": {
 				"north": {"uv": [0, 3.25, 0.25, 3.5], "texture": "#2"},
@@ -566,14 +566,11 @@
 			}
 		}
 	],
-	"gui_light": "front",
 	"display": {
 		"thirdperson_righthand": {
-			"translation": [0, 3, 1.75],
-			"scale": [0.37969, 0.35719, 0.37742]
+			"scale": [0.3, 0.3, 0.3]
 		},
 		"thirdperson_lefthand": {
-			"translation": [0, 2.5, 1.5],
 			"scale": [0.3, 0.3, 0.3]
 		},
 		"firstperson_righthand": {
@@ -590,22 +587,25 @@
 		},
 		"head": {
 			"translation": [0, 12.75, 0]
+		},
+		"fixed": {
+			"translation": [0, 0, -5]
 		}
 	},
 	"groups": [
 		{
 			"name": "trophy",
-			"origin": [0, 0, 0],
+			"origin": [-8, 0, -8],
 			"color": 0,
 			"children": [
 				{
 					"name": "trophy_top",
-					"origin": [8, 8, 8],
+					"origin": [0, 8, 0],
 					"color": 0,
 					"children": [
 						{
 							"name": "pacmantrophy_top",
-							"origin": [8, 8, 8],
+							"origin": [0, 8, 0],
 							"color": 0,
 							"children": [
 								0,
@@ -620,14 +620,14 @@
 								9,
 								10,
 								{
-									"name": "teeth",
-									"origin": [8, 8, 8],
+									"name": "teeth2",
+									"origin": [0, 8, 0],
 									"color": 0,
 									"children": [11, 12, 13, 14, 15, 16, 17, 18]
 								},
 								{
 									"name": "eyes",
-									"origin": [8, 8, 8],
+									"origin": [0, 8, 0],
 									"color": 0,
 									"children": [19, 20, 21, 22, 23, 24]
 								}
@@ -635,7 +635,7 @@
 						},
 						{
 							"name": "pacmantrophy_bottom",
-							"origin": [8, 8, 8],
+							"origin": [0, 8, 0],
 							"color": 0,
 							"children": [
 								25,
@@ -651,7 +651,7 @@
 								35,
 								{
 									"name": "teeth",
-									"origin": [8, 8, 8],
+									"origin": [0, 8, 0],
 									"color": 0,
 									"children": [36, 37, 38, 39, 40, 41]
 								}
@@ -661,7 +661,7 @@
 				},
 				{
 					"name": "trophy_body",
-					"origin": [8, 8, 8],
+					"origin": [0, 8, 0],
 					"color": 0,
 					"children": [42]
 				}
@@ -669,4 +669,3 @@
 		}
 	]
 }
-
