@@ -2,6 +2,7 @@ package net.adventureg147.giantpacman;
 
 import net.adventureg147.giantpacman.block.ModBlocks;
 import net.adventureg147.giantpacman.entity.ModEntityTypes;
+import net.adventureg147.giantpacman.entity.render.GiantPacmanRenderer;
 import net.adventureg147.giantpacman.item.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
@@ -12,6 +13,7 @@ import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.InterModComms;
+import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -64,6 +66,7 @@ public class GiantPacman
         event.enqueueWork(() -> {
             RenderTypeLookup.setRenderLayer(ModBlocks.PACMAN_TROPHY.get(), RenderType.getCutout());
         });
+        RenderingRegistry.registerEntityRenderingHandler(ModEntityTypes.GIANT_PACMAN.get(), GiantPacmanRenderer::new);
     }
 
     private void enqueueIMC(final InterModEnqueueEvent event)

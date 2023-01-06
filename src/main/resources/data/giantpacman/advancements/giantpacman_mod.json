@@ -1,11 +1,11 @@
 {
   "display": {
     "icon": {
-      "item": "giantpacman:placeholder"
+      "item": "giantpacman:pacman_spawn_egg"
     },
     "title": "Giant Pacman",
     "description": "The Giant Pacman Mod",
-    "background": "giantpacman:textures/item/placeholder.png",
+    "background": "giantpacman:textures/item/pacman_spawn_egg.png",
     "frame": "task",
     "show_toast": false,
     "announce_to_chat": false,

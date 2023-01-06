@@ -9,7 +9,7 @@ public class ModItemGroup
         @Override
         public ItemStack createIcon() {
             {
-                return new ItemStack(ModItems.PLACEHOLDER.get());
+                return new ItemStack(ModItems.PACMAN_SPAWN_EGG.get());
             }
         }
     };
