@@ -37,7 +37,7 @@ description='''
 This is NOT the official port to Killer Pacman. This mod was only inspired by it, and I use my own assets.
 '''
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
-[[dependencies.examplemod]] #optional
+[[dependencies.giantpacman]] #optional
     # the modid of the dependency
     modId="forge" #mandatory
     # Does this dependency have to exist - if not, ordering below must be specified
@@ -49,10 +49,16 @@ This is NOT the official port to Killer Pacman. This mod was only inspired by it
     # Side this dependency is applied on - BOTH, CLIENT or SERVER
     side="BOTH"
 # Here's another dependency
-[[dependencies.examplemod]]
+[[dependencies.giantpacman]]
     modId="minecraft"
     mandatory=true
-# This version range declares a minimum of the current minecraft version up to but not including the next major version
     versionRange="[1.16.5,1.17)"
     ordering="NONE"
     side="BOTH"
+[[dependencies.giantpacman]]
+    modId="geckolib3"
+    mandatory=true
+    versionRange="[3.0.104,)"
+    ordering="NONE"
+    side="BOTH"
+
