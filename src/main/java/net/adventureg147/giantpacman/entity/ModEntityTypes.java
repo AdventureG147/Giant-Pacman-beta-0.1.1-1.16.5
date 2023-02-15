@@ -18,8 +18,8 @@ public class ModEntityTypes {
 
     public static final RegistryObject<EntityType<GiantPacmanEntity>> GIANT_PACMAN =
             ENTITY_TYPES.register("giant_pacman",
-                    () -> EntityType.Builder.create(GiantPacmanEntity::new,
-                            EntityClassification.MONSTER).size(2f, 2f)
+                    () -> EntityType.Builder.of(GiantPacmanEntity::new,
+                            EntityClassification.MONSTER).sized(2f, 2f)
                             .build(new ResourceLocation(GiantPacman.MOD_ID, "giant_pacman").toString()));
 
 

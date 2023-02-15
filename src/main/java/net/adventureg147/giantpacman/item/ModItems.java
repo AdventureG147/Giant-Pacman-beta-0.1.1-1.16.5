@@ -17,7 +17,7 @@ public class ModItems {
             ITEMS.register("pacman_spawn_egg", () -> new ModSpawnEggItem(ModEntityTypes.GIANT_PACMAN,
                     0xF1E702, 0x767106,
 
-                    new Item.Properties().group(ModItemGroup.PACMAN_GROUP)));
+                    new Item.Properties().tab(ModItemGroup.PACMAN_GROUP)));
 
 
 

@@ -14,7 +14,7 @@ import net.minecraftforge.fml.common.Mod;
 public class ModEventBusEvents {
     @SubscribeEvent
     public static void addEntityAttributes(EntityAttributeCreationEvent event) {
-        event.put(ModEntityTypes.GIANT_PACMAN.get(), GiantPacmanEntity.setCustomAttributes().create());
+        event.put(ModEntityTypes.GIANT_PACMAN.get(), GiantPacmanEntity.setCustomAttributes().build());
     }
 
     @SubscribeEvent

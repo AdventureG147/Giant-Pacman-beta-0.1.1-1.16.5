@@ -4,6 +4,7 @@ import net.adventureg147.giantpacman.block.ModBlocks;
 import net.adventureg147.giantpacman.entity.ModEntityTypes;
 import net.adventureg147.giantpacman.entity.render.GiantPacmanRenderer;
 import net.adventureg147.giantpacman.item.ModItems;
+import net.adventureg147.giantpacman.util.ModSoundEvents;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.client.renderer.RenderType;
@@ -41,6 +42,7 @@ public class GiantPacman
         ModItems.register(eventBus);
         ModEntityTypes.register(eventBus);
         ModBlocks.register(eventBus);
+        ModSoundEvents.register(eventBus);
 
         eventBus.addListener(this::setup);
         // Register the enqueueIMC method for modloading
@@ -64,7 +66,7 @@ public class GiantPacman
     private void doClientStuff(final FMLClientSetupEvent event) {
         // do something that can only be done on the client
         event.enqueueWork(() -> {
-            RenderTypeLookup.setRenderLayer(ModBlocks.PACMAN_TROPHY.get(), RenderType.getCutout());
+            RenderTypeLookup.setRenderLayer(ModBlocks.PACMAN_TROPHY.get(), RenderType.cutout());
         });
         RenderingRegistry.registerEntityRenderingHandler(ModEntityTypes.GIANT_PACMAN.get(), GiantPacmanRenderer::new);
     }

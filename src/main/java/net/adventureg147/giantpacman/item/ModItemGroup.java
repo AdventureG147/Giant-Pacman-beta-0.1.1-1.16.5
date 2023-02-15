@@ -7,10 +7,9 @@ public class ModItemGroup
 {
     public static final ItemGroup PACMAN_GROUP = new ItemGroup("pacmanModTab") {
         @Override
-        public ItemStack createIcon() {
-            {
-                return new ItemStack(ModItems.PACMAN_SPAWN_EGG.get());
-            }
+        public ItemStack makeIcon()
+        {
+            return new ItemStack(ModItems.PACMAN_SPAWN_EGG.get());
         }
     };
 }

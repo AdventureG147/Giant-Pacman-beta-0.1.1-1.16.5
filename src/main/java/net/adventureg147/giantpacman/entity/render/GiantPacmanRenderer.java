@@ -14,9 +14,9 @@ public class GiantPacmanRenderer extends MobRenderer<GiantPacmanEntity, GiantPac
     public GiantPacmanRenderer(EntityRendererManager renderManagerIn) {
         super(renderManagerIn, new GiantPacmanModel<>(), 0.7F);
     }
-
     @Override
-    public ResourceLocation getEntityTexture(GiantPacmanEntity entity) {
+    public ResourceLocation getTextureLocation(GiantPacmanEntity pEntity) {
+        new ResourceLocation(GiantPacman.MOD_ID, "textures/entity/pacman_texture.png");
         return TEXTURE;
     }
 }

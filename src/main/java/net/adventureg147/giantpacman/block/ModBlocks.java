@@ -34,12 +34,10 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> PACMAN_TROPHY =
             registerBlock("pacman_trophy",
-                    () -> new PacmanTrophyBlock(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
-                            .hardnessAndResistance(3f).notSolid()));
+                    () -> new PacmanTrophyBlock(AbstractBlock.Properties.of(Material.DECORATION)));
     public static final RegistryObject<Block> GOLDEN_TROPHY =
-            registerBlock("golden_pacman_trophy", () -> new
-                    GoldenTrophyBlock(AbstractBlock.Properties
-                    .create(Material.MISCELLANEOUS).hardnessAndResistance(3f).notSolid()));
+            registerBlock("golden_pacman_trophy",
+                    () -> new GoldenTrophyBlock(AbstractBlock.Properties.of(Material.DECORATION)));
 
 
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block) {
@@ -50,7 +48,7 @@ public class ModBlocks {
 
     private static <T extends Block> void registerBlockItem(String name, RegistryObject<T> block) {
         ModItems.ITEMS.register(name, () -> new BlockItem(block.get(),
-                new Item.Properties().group(ModItemGroup.PACMAN_GROUP)));
+                new Item.Properties().tab(ModItemGroup.PACMAN_GROUP)));
     }
 
 
