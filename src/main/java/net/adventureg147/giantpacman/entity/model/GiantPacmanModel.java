@@ -155,7 +155,7 @@ public class GiantPacmanModel<G extends ZombieEntity> extends EntityModel<GiantP
 	}
 
 	@Override
-	public void render(MatrixStack matrixStack, IVertexBuilder buffer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha){
+	public void renderToBuffer(MatrixStack matrixStack, IVertexBuilder buffer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha){
 		bone.render(matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
 	}
 
@@ -163,10 +163,5 @@ public class GiantPacmanModel<G extends ZombieEntity> extends EntityModel<GiantP
 		modelRenderer.xRot = x;
 		modelRenderer.yRot = y;
 		modelRenderer.zRot = z;
-	}
-
-	@Override
-	public void renderToBuffer(MatrixStack pMatrixStack, IVertexBuilder pBuffer, int pPackedLight, int pPackedOverlay, float pRed, float pGreen, float pBlue, float pAlpha) {
-
 	}
 }

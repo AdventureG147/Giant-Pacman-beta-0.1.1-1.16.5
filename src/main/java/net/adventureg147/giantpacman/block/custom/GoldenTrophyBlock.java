@@ -17,13 +17,13 @@ public class GoldenTrophyBlock extends HorizontalBlock {
     }
 
     @Override
-    protected void fillStateContainer(StateContainer.Builder<Block, BlockState> builder) {
+    protected void createBlockStateDefinition(StateContainer.Builder<Block, BlockState> builder) {
         builder.add(HORIZONTAL_FACING);
     }
 
     @Nullable
     @Override
     public BlockState getStateForPlacement(BlockItemUseContext context) {
-        return this.defaultBlockState().with(HORIZONTAL_FACING, context.getHorizontalDirection().getOpposite()); ;
+        return this.defaultBlockState().setValue(HORIZONTAL_FACING, context.getHorizontalDirection().getOpposite()); ;
     }
 }
