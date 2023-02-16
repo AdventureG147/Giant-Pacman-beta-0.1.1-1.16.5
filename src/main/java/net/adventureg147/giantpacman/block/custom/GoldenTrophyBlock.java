@@ -10,8 +10,8 @@ import javax.annotation.Nullable;
 
 import static net.minecraft.state.properties.BlockStateProperties.HORIZONTAL_FACING;
 
-public class TrophyBlock extends HorizontalBlock {
-    public TrophyBlock(Properties builder) {
+public class GoldenTrophyBlock extends HorizontalBlock {
+    public GoldenTrophyBlock(Properties builder) {
         super(builder);
     }
 
