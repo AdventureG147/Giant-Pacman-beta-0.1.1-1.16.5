@@ -1,6 +1,5 @@
 package net.adventureg147.giantpacman.entity;
 
-
 import net.adventureg147.giantpacman.GiantPacman;
 import net.adventureg147.giantpacman.entity.custom.GiantPacmanEntity;
 import net.minecraft.entity.EntityClassification;
@@ -11,16 +10,13 @@ import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
-
-
 public class ModEntityTypes {
     public static final DeferredRegister<EntityType<?>> ENTITY_TYPES = DeferredRegister.create(ForgeRegistries.ENTITIES, GiantPacman.MOD_ID);
 
-    public static final RegistryObject<EntityType<GiantPacmanEntity>> GIANT_PACMAN =
-            ENTITY_TYPES.register("giant_pacman",
-                    () -> EntityType.Builder.of(GiantPacmanEntity::new,
-                            EntityClassification.MONSTER).sized(2f, 2f)
-                            .build(new ResourceLocation(GiantPacman.MOD_ID, "giant_pacman").toString()));
+    public static final RegistryObject<EntityType<GiantPacmanEntity>> GIANT_PACMAN = ENTITY_TYPES.register("giant_pacman",
+            () -> EntityType.Builder.of(GiantPacmanEntity::new, EntityClassification.MONSTER)
+                    .sized(2f, 2f)
+                    .build(new ResourceLocation(GiantPacman.MOD_ID, "giant_pacman").toString()));
 
 
 
