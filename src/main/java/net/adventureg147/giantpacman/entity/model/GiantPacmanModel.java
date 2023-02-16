@@ -3,15 +3,14 @@ package net.adventureg147.giantpacman.entity.model;
 // Exported for Minecraft version 1.15 - 1.16 with MCP mappings
 // Paste this class into your mod and generate all required imports
 
-
 import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.vertex.IVertexBuilder;
 import net.adventureg147.giantpacman.entity.custom.GiantPacmanEntity;
 import net.minecraft.client.renderer.entity.model.EntityModel;
 import net.minecraft.client.renderer.model.ModelRenderer;
-import net.minecraft.entity.monster.ZombieEntity;
+import net.minecraft.entity.monster.MonsterEntity;
 
-public class GiantPacmanModel<G extends ZombieEntity> extends EntityModel<GiantPacmanEntity> {
+public class GiantPacmanModel<G extends MonsterEntity> extends EntityModel<GiantPacmanEntity> {
 	private final ModelRenderer bone;
 	private final ModelRenderer bone_top;
 	private final ModelRenderer pacman_top;

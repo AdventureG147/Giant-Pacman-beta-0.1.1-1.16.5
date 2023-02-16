@@ -3,7 +3,6 @@ package net.adventureg147.giantpacman.block.custom;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.HorizontalBlock;
-import net.minecraft.block.HorizontalFaceBlock;
 import net.minecraft.item.BlockItemUseContext;
 import net.minecraft.state.StateContainer;
 
@@ -11,8 +10,8 @@ import javax.annotation.Nullable;
 
 import static net.minecraft.state.properties.BlockStateProperties.HORIZONTAL_FACING;
 
-public class PacmanTrophyBlock extends HorizontalBlock {
-    public PacmanTrophyBlock(Properties builder) {
+public class TrophyBlock extends HorizontalBlock {
+    public TrophyBlock(Properties builder) {
         super(builder);
     }
 
