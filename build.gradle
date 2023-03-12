@@ -9,6 +9,9 @@ buildscript {
         classpath 'org.parchmentmc:librarian:1.+'
     }
 }
+repositories {
+    maven { url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/' }
+}
 apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'org.parchmentmc.librarian.forgegradle'
 // Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
@@ -122,7 +125,7 @@ dependencies {
     // that the dep is a ForgeGradle 'patcher' dependency. And it's patches will be applied.
     // The userdev artifact is a special name and will get all sorts of transformations applied to it.
     minecraft 'net.minecraftforge:forge:1.16.5-36.2.34'
-    //implementation fg.deobf("software.bernie.geckolib:geckolib-forge-1.16.5:3.0.104")
+    implementation fg.deobf('software.bernie.geckolib:geckolib-forge-1.16.5:3.0.106')
 
 
 }

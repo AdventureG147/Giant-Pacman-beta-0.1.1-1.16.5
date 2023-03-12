@@ -1,5 +1,6 @@
 package net.adventureg147.giantpacman.entity.custom;
 
+import net.adventureg147.giantpacman.util.ModSoundEvents;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.MobEntity;
@@ -45,16 +46,16 @@ public class GiantPacmanEntity extends MonsterEntity {
 
     @Override
     protected SoundEvent getDeathSound() {
-        return SoundEvents.HOGLIN_DEATH;
+        return ModSoundEvents.PACMAN_DEATH.get();
     }
 
     @Override
     protected SoundEvent getHurtSound(DamageSource damageSourceIn) {
-        return SoundEvents.HOGLIN_HURT;
+        return ModSoundEvents.PACMAN_HURT.get();
     }
 
     @Override
     protected void playStepSound(BlockPos pos, BlockState blockIn) {
-        this.playSound(SoundEvents.HONEY_BLOCK_STEP, 0.20F, 0.5F);
+        this.playSound(ModSoundEvents.PACMAN_SOUND.get(), 0.20F, 1.F);
     }
 }
