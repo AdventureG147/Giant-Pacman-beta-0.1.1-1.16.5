@@ -138,16 +138,6 @@ public class GiantPacmanModel<G extends MonsterEntity> extends EntityModel<Giant
 		teeth_bottom.setTexSize(0, 34).addBox(-2.0F, -29.0F, -5.0F, 1.0F, 1.0F, 1.0F, 0.0F, false);
 	}
 
-	/**
-	 * Sets this entity's model rotation angles
-	 *
-	 * @param pEntity
-	 * @param pLimbSwing
-	 * @param pLimbSwingAmount
-	 * @param pAgeInTicks
-	 * @param pNetHeadYaw
-	 * @param pHeadPitch
-	 */
 	@Override
 	public void setupAnim(GiantPacmanEntity pEntity, float pLimbSwing, float pLimbSwingAmount, float pAgeInTicks, float pNetHeadYaw, float pHeadPitch) {
 
