@@ -8,7 +8,7 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.client.renderer.entity.MobRenderer;
 
 public class GiantPacmanRenderer extends MobRenderer<GiantPacmanEntity, GiantPacmanModel<GiantPacmanEntity>> {
-    protected static final ResourceLocation TEXTURE = new ResourceLocation(GiantPacman.MOD_ID, "textures/entity/pacman_texture.png");
+    protected static final ResourceLocation TEXTURE = new ResourceLocation(GiantPacman.MOD_ID, "textures/entity/pacman_texture_redesign.png");
 
     public GiantPacmanRenderer(EntityRendererManager renderManagerIn) {
         super(renderManagerIn, new GiantPacmanModel<>(), 0.7F);
