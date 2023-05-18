@@ -1,20 +1,17 @@
 {
   "pacman_sound": {
-    "catagory": "entities",
     "subtitle": "giantpacman.pacman_sound",
     "sounds": [
       "giantpacman:pacman_sound"
     ]
   },
   "pacman_hurt": {
-    "catagory": "entities",
     "subtitle": "giantpacman.pacman_hurt",
     "sounds": [
       "giantpacman:pacman_hurt"
     ]
   },
   "pacman_death": {
-    "catagory": "entities",
     "subtitle": "giantpacman.pacman_death",
     "sounds": [
       "giantpacman:pacman_death"

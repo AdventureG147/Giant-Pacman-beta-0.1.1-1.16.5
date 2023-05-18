@@ -2,5 +2,8 @@
   "item.giantpacman.pacman_spawn_egg": "Pacman Spawn Egg",
   "block.giantpacman.pacman_trophy": "Pacman Trophy",
   "itemGroup.pacmanModTab": "Giant Pacman Mod",
-  "block.giantpacman.golden_pacman_trophy": "Golden Pacman Trophy"
+  "block.giantpacman.golden_pacman_trophy": "Golden Pacman Trophy",
+  "sound.giantpacman.pacman_sound": "Pacman Walks?",
+  "sound.giantpacman.pacman_death": "Pacman Dies",
+  "animation.giantpacman.pac_chomp": "Chomp Chomp Chomp"
 }
