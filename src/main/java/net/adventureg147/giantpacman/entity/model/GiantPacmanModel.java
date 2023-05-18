@@ -16,8 +16,8 @@ import software.bernie.geckolib3.model.AnimatedGeoModel;
 import software.bernie.geckolib3.model.provider.GeoModelProvider;
 
 public class GiantPacmanModel extends AnimatedGeoModel {
-	private static final ResourceLocation modelResource = new ResourceLocation(GeckoLib.ModID, "geo/giant_pacman_new.geo.json");
-	private static final ResourceLocation textureResource = new ResourceLocation(GeckoLib.ModID, "textures/item/pacman_texture_redesign.png");
+	private static final ResourceLocation modelResource = new ResourceLocation(GeckoLib.ModID, "geo/giant_pacman.geo.json");
+	private static final ResourceLocation textureResource = new ResourceLocation(GeckoLib.ModID, "textures/entity/pacman_texture.png");
 	private static final ResourceLocation animationResource = new ResourceLocation(GeckoLib.ModID, "animations/pac_chomp.animation.json");
 
 	@Override

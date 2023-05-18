@@ -15,7 +15,7 @@ import software.bernie.geckolib3.renderers.geo.IGeoRenderer;
 
 public class GiantPacmanRenderer extends GeoEntityRenderer implements IGeoRenderer {
     protected static final ResourceLocation TEXTURE
-            = new ResourceLocation(GiantPacman.MOD_ID, "textures/entity/pacman_texture_redesign.png");
+            = new ResourceLocation(GiantPacman.MOD_ID, "textures/entity/pacman_texture.png");
 
     public GiantPacmanRenderer(EntityRendererManager renderManagerIn) {
         super(renderManagerIn, new AnimatedGeoModel() {
