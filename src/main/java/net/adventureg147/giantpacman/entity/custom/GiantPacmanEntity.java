@@ -34,13 +34,14 @@ public class GiantPacmanEntity extends MonsterEntity implements IAnimatable {
         super(type, worldIn);
     }
 
-
     private <E extends IAnimatable> PlayState predicate(AnimationEvent<E> event) {
         if (event.isMoving())
             event.getController().setAnimation
                     (new AnimationBuilder().addAnimation("pac_chomp.animation.json",
                             ILoopType.EDefaultLoopTypes.LOOP));return PlayState.CONTINUE;
     }
+
+
 
     public static AttributeModifierMap.MutableAttribute setCustomAttributes() {
         return MobEntity.createMobAttributes()

@@ -18,7 +18,7 @@ apply plugin: 'org.parchmentmc.librarian.forgegradle'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
-version = '1.0'
+version = '1.16.5'
 group = 'net.adventureg147.giantpacman'
 archivesBaseName = 'giantpacman'
 
@@ -89,7 +89,7 @@ jar {
             "Specification-Vendor": "AdventureG147",
             "Specification-Version": "1", // We are version 1 of ourselves
             "Implementation-Title": project.name,
-            "Implementation-Version": "${version}",
+            "Implementation-Version": "0.0.5",
             "Implementation-Vendor" :"AdventureG147",
             "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
         ])

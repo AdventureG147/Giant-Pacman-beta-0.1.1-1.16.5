@@ -8,12 +8,14 @@ import net.minecraft.client.renderer.entity.EntityRendererManager;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.client.renderer.entity.MobRenderer;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 import software.bernie.geckolib3.core.IAnimatable;
+import software.bernie.geckolib3.core.builder.Animation;
 import software.bernie.geckolib3.model.AnimatedGeoModel;
 import software.bernie.geckolib3.renderers.geo.GeoEntityRenderer;
 import software.bernie.geckolib3.renderers.geo.IGeoRenderer;
 
-public class GiantPacmanRenderer extends GeoEntityRenderer implements IGeoRenderer {
+public class GiantPacmanRenderer extends GeoEntityRenderer<GiantPacmanEntity> {
     protected static final ResourceLocation TEXTURE
             = new ResourceLocation(GiantPacman.MOD_ID, "textures/entity/pacman_texture.png");
 
@@ -26,7 +28,7 @@ public class GiantPacmanRenderer extends GeoEntityRenderer implements IGeoRender
 
             @Override
             public ResourceLocation getTextureLocation(Object object) {
-                return null;
+                return TEXTURE;
             }
 
             @Override
@@ -43,13 +45,6 @@ public class GiantPacmanRenderer extends GeoEntityRenderer implements IGeoRender
      *
      * @param pEntity
      */
-    @Override
-    public ResourceLocation getTextureLocation(Entity pEntity) {
-        return TEXTURE;
-    }
-
-
-
 
 }
 
