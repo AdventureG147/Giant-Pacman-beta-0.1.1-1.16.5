@@ -2,7 +2,8 @@ package net.adventureg147.giantpacman;
 
 import net.adventureg147.giantpacman.block.ModBlocks;
 import net.adventureg147.giantpacman.entity.ModEntityTypes;
-import net.adventureg147.giantpacman.entity.render.GiantPacmanRenderer;
+import net.adventureg147.giantpacman.entity.model.GeoGPacmanRenderer;
+import net.adventureg147.giantpacman.entity.render.GeoGPacmanModel;
 import net.adventureg147.giantpacman.item.ModItems;
 import net.adventureg147.giantpacman.util.ModSoundEvents;
 import net.minecraft.client.renderer.RenderType;
@@ -40,6 +41,7 @@ public class GiantPacman
             RenderTypeLookup.setRenderLayer(ModBlocks.PACMAN_TROPHY.get(), RenderType.cutout());
             RenderTypeLookup.setRenderLayer(ModBlocks.GOLDEN_TROPHY.get(), RenderType.cutout());
         });
-        RenderingRegistry.registerEntityRenderingHandler(ModEntityTypes.GIANT_PACMAN.get(), GiantPacmanRenderer::new);
+        RenderingRegistry.registerEntityRenderingHandler(ModEntityTypes.GIANT_PACMAN.get(), GeoGPacmanRenderer::new);
     }
+
 }

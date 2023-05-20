@@ -12,7 +12,9 @@ import net.minecraftforge.registries.ForgeRegistries;
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, GiantPacman.MOD_ID);
 
-    public static final RegistryObject<ForgeSpawnEggItem> PACMAN_SPAWN_EGG = ITEMS.register("pacman_spawn_egg", () -> new ForgeSpawnEggItem(ModEntityTypes.GIANT_PACMAN, 0xF1E702, 0x767106, new Item.Properties().tab(ModItemGroup.PACMAN_GROUP)));
+    public static final RegistryObject<ForgeSpawnEggItem> PACMAN_SPAWN_EGG = ITEMS.register
+            ("pacman_spawn_egg", () -> new ForgeSpawnEggItem(ModEntityTypes.GIANT_PACMAN,
+                    0xF1E702, 0x767106, new Item.Properties().tab(ModItemGroup.PACMAN_GROUP)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

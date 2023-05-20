@@ -1,7 +1,7 @@
 package net.adventureg147.giantpacman.entity;
 
 import net.adventureg147.giantpacman.GiantPacman;
-import net.adventureg147.giantpacman.entity.custom.GiantPacmanEntity;
+import net.adventureg147.giantpacman.entity.custom.GeoGPacmanEntity;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
 import net.minecraft.util.ResourceLocation;
@@ -13,8 +13,8 @@ import net.minecraftforge.registries.ForgeRegistries;
 public class ModEntityTypes {
     public static final DeferredRegister<EntityType<?>> ENTITY_TYPES = DeferredRegister.create(ForgeRegistries.ENTITIES, GiantPacman.MOD_ID);
 
-    public static final RegistryObject<EntityType<GiantPacmanEntity>> GIANT_PACMAN = ENTITY_TYPES.register("giant_pacman",
-            () -> EntityType.Builder.of(GiantPacmanEntity::new, EntityClassification.MONSTER)
+    public static final RegistryObject<EntityType<GeoGPacmanEntity>> GIANT_PACMAN = ENTITY_TYPES.register("giant_pacman",
+            () -> EntityType.Builder.of(GeoGPacmanEntity::new, EntityClassification.MONSTER)
                     .sized(2f, 2f)
                     .build(new ResourceLocation(GiantPacman.MOD_ID, "giant_pacman").toString()));
 

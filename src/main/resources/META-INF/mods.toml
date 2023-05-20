@@ -29,7 +29,7 @@ displayName="Giant Pacman" #mandatory
 # A file name (in the root of the mod JAR) containing a logo for display
 logoFile="examplemod.png" #optional
 # A text field displayed in the mod UI
-credits="" #optional
+credits="AdventureG147" #optional
 # A text field displayed in the mod UI
 authors="AdventureG147 - Creator" #optional
 # The description text for the mod (multi line!) (#mandatory)
