@@ -19,8 +19,10 @@ import java.util.function.Supplier;
 public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, GiantPacman.MOD_ID);
 
-    public static final RegistryObject<Block> PACMAN_TROPHY = registerBlock("pacman_trophy", () -> new PacmanTrophyBlock(AbstractBlock.Properties.of(Material.DECORATION).noOcclusion()));
-    public static final RegistryObject<Block> GOLDEN_TROPHY = registerBlock("golden_pacman_trophy", () -> new GoldenTrophyBlock(AbstractBlock.Properties.of(Material.DECORATION).noOcclusion()));
+    public static final RegistryObject<Block> PACMAN_TROPHY = registerBlock("pacman_trophy",
+            () -> new PacmanTrophyBlock(AbstractBlock.Properties.of(Material.DECORATION).noOcclusion()));
+    public static final RegistryObject<Block> GOLDEN_TROPHY = registerBlock("golden_pacman_trophy",
+            () -> new GoldenTrophyBlock(AbstractBlock.Properties.of(Material.DECORATION).noOcclusion()));
 
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block) {
          RegistryObject<T> toReturn = BLOCKS.register(name, block);

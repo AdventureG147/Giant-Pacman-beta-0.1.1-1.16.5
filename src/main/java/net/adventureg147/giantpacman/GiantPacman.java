@@ -2,8 +2,7 @@ package net.adventureg147.giantpacman;
 
 import net.adventureg147.giantpacman.block.ModBlocks;
 import net.adventureg147.giantpacman.entity.ModEntityTypes;
-import net.adventureg147.giantpacman.entity.model.GeoGPacmanRenderer;
-import net.adventureg147.giantpacman.entity.render.GeoGPacmanModel;
+import net.adventureg147.giantpacman.entity.render.GeoGPacmanRenderer;
 import net.adventureg147.giantpacman.item.ModItems;
 import net.adventureg147.giantpacman.util.ModSoundEvents;
 import net.minecraft.client.renderer.RenderType;

@@ -1,20 +1,22 @@
-package net.adventureg147.giantpacman.entity.render;
+package net.adventureg147.giantpacman.entity.model;
 
-import net.adventureg147.giantpacman.entity.custom.GeoGPacmanEntity;
+import net.adventureg147.giantpacman.GiantPacman;
 import net.minecraft.util.ResourceLocation;
-import software.bernie.geckolib3.geo.render.built.GeoModel;
 import software.bernie.geckolib3.model.AnimatedGeoModel;
 
 public class GeoGPacmanModel extends AnimatedGeoModel{
+    private static final ResourceLocation modelResource = new ResourceLocation(GiantPacman.MOD_ID, "geo/giant_pacman.geo.json");
+    private static final ResourceLocation textureResource = new ResourceLocation(GiantPacman.MOD_ID, "textures/entity/pacman_texture.png");
+    private static final ResourceLocation animationResource = new ResourceLocation(GiantPacman.MOD_ID, "animations/pac_chomp.animation.json");
 
     @Override
     public ResourceLocation getModelLocation(Object object) {
-        return null;
+        return modelResource;
     }
 
     @Override
     public ResourceLocation getTextureLocation(Object object) {
-        return null;
+        return textureResource;
     }
 
     /**
@@ -26,6 +28,6 @@ public class GeoGPacmanModel extends AnimatedGeoModel{
      */
     @Override
     public ResourceLocation getAnimationFileLocation(Object animatable) {
-        return null;
+        return animationResource;
     }
 }
