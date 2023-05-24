@@ -25,7 +25,7 @@ public class GeoGPacmanRenderer extends GeoEntityRenderer<GeoGPacmanEntity> {
 
     	@Override
     	public ResourceLocation getTextureLocation(GeoGPacmanEntity entity) {
-    		return new ResourceLocation(GiantPacman.MOD_ID, "textures/entity/pacman_texture");
+    		return new ResourceLocation(GiantPacman.MOD_ID, "textures/entity/pacman_texture.png");
     	}
 
     	@Override
