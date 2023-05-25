@@ -28,11 +28,11 @@ import software.bernie.geckolib3.core.manager.AnimationData;
 import software.bernie.geckolib3.core.manager.AnimationFactory;
 import software.bernie.geckolib3.renderers.geo.GeoEntityRenderer;
 
-public class GeoGPacmanEntity extends ZombieEntity implements IAnimatable {
+public class GeoGPacmanEntity extends MonsterEntity implements IAnimatable {
 
     private AnimationFactory factory;
 
-    public GeoGPacmanEntity(EntityType<? extends ZombieEntity> p_i50197_1_, World p_i50197_2_) {
+    public GeoGPacmanEntity(EntityType<? extends MonsterEntity> p_i50197_1_, World p_i50197_2_) {
         super(p_i50197_1_, p_i50197_2_);
     }
 
@@ -65,6 +65,7 @@ public class GeoGPacmanEntity extends ZombieEntity implements IAnimatable {
                 ("pacman.animation.chomp", ILoopType.EDefaultLoopTypes.LOOP));
         return PlayState.CONTINUE;
     }
+
 
     @Override
     public void registerControllers(AnimationData data) {
