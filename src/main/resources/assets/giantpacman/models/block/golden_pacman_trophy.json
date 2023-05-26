@@ -2,9 +2,9 @@
 	"credit": "Made by AdventureG147, with Blockbench",
 	"texture_size": [64, 64],
 	"textures": {
-		"0": "giantpacman:block/golden_body_texture",
-		"1": "giantpacman:block/golden_trophy_texture",
-		"particle": "giantpacman:block/golden_body_texture"
+		"0": "giantpacman:block/golden_trophy_base",
+		"1": "giantpacman:block/golden_trophy",
+		"particle": "giantpacman:block/golden_trophy_base"
 	},
 	"elements": [
 		{

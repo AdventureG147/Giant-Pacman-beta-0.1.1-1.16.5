@@ -1,112 +1,126 @@
 buildscript {
-    repositories {
-        maven { url = 'https://maven.minecraftforge.net' }
-        maven { url = 'https://maven.parchmentmc.org' }
-        mavenCentral()
-    }
-    dependencies {
-        classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '5.1.+', changing: true
-        classpath 'org.parchmentmc:librarian:1.+'
-    }
+	repositories {
+		maven { url = 'https://maven.minecraftforge.net' }
+		maven { url = 'https://maven.parchmentmc.org' }
+		mavenCentral()
+	}
+	dependencies {
+		classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '5.1.+', changing: true
+		classpath 'org.parchmentmc:librarian:1.+'
+	}
 }
-repositories {
-    maven { url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/' }
-}
-apply plugin: 'net.minecraftforge.gradle'
-apply plugin: 'org.parchmentmc.librarian.forgegradle'
-// Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
-apply plugin: 'eclipse'
-apply plugin: 'maven-publish'
 
-version = '1.0'
-group = 'net.adventureg147.giantpacman'
-archivesBaseName = 'giantpacman'
+apply plugin: "net.minecraftforge.gradle"
+apply plugin: 'org.parchmentmc.librarian.forgegradle'
+apply plugin: "eclipse"
+apply plugin: "maven-publish"
+
+version = "${project.minecraftVersion}-${project.modVersion}"
+group = 'net.adventureg147'
+archivesBaseName = project.modId
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(8)
 
-println('Java: ' + System.getProperty('java.version') + ' JVM: ' + System.getProperty('java.vm.version') + '(' + System.getProperty('java.vendor') + ') Arch: ' + System.getProperty('os.arch'))
 minecraft {
-    mappings channel: 'parchment', version: '2022.03.06-1.16.5'
-    runs {
-        client {
-            workingDirectory project.file('run')
+	mappings channel: 'parchment', version: "${project.parchmentMappingsVersion}"
 
-            property 'forge.logging.markers', 'REGISTRIES'
+	accessTransformer = file("src/main/resources/META-INF/accesstransformer.cfg")
 
-            property 'forge.logging.console.level', 'debug'
+	runs {
+		client {
+			workingDirectory project.file('run')
+			property 'forge.logging.markers', 'REGISTRIES'
+			property 'forge.logging.console.level', 'debug'
+			mods {
+				giantpacman {
+					source sourceSets.main
+				}
+			}
+		}
 
-            mods {
-                giantpacman {
-                    source sourceSets.main
-                }
-            }
-        }
+		server {
+			workingDirectory project.file('run')
+			property 'forge.logging.markers', 'REGISTRIES'
+			property 'forge.logging.console.level', 'debug'
+			mods {
+				giantpacman {
+					source sourceSets.main
+				}
+			}
+		}
 
-        server {
-            workingDirectory project.file('run')
-
-            property 'forge.logging.markers', 'REGISTRIES'
-
-            property 'forge.logging.console.level', 'debug'
-
-            mods {
-                giantpacman {
-                    source sourceSets.main
-                }
-            }
-        }
-
-        data {
-            workingDirectory project.file('run')
-
-            property 'forge.logging.markers', 'REGISTRIES'
-
-            property 'forge.logging.console.level', 'debug'
-
-            args '--mod', 'giantpacman', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
-
-            mods {
-                giantpacman {
-                    source sourceSets.main
-                }
-            }
-        }
-    }
+		data {
+			workingDirectory project.file('run')
+			property 'forge.logging.markers', 'REGISTRIES'
+			property 'forge.logging.console.level', 'debug'
+			args '--mod', 'giantpacman', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
+			mods {
+				giantpacman {
+					source sourceSets.main
+				}
+			}
+		}
+	}
 }
 
-sourceSets.main.resources { srcDir 'src/generated/resources' }
+sourceSets {
+	main.resources.srcDirs += 'src/main/generated'
+}
 
 dependencies {
-    minecraft 'net.minecraftforge:forge:1.16.5-36.2.34'
-    implementation fg.deobf('software.bernie.geckolib:geckolib-forge-1.16.5:3.0.106')
+	minecraft "net.minecraftforge:forge:${project.minecraftVersion}-${project.forgeVersion}"
 
+	implementation fg.deobf("software.bernie.geckolib:geckolib-forge-1.16.5:${project.geckolib}")
 
+	implementation fg.deobf("mezz.jei:jei-1.16.5:${project.jei}:api")
+	implementation fg.deobf("mezz.jei:jei-1.16.5:${project.jei}")
+	implementation fg.deobf("curse.maven:just-enough-resources-jer-240630:${project.jer}")
+
+	implementation fg.deobf("curse.maven:configured-457570:${project.configured}")
+	implementation fg.deobf("curse.maven:catalogue-459701:${project.catalogue}")
+
+	implementation fg.deobf("curse.maven:the-one-probe-245211:${project.top}")
 }
+
 jar {
-    manifest {
-        attributes([
-            "Specification-Title": "giantpacman",
-            "Specification-Vendor": "AdventureG147",
-            "Specification-Version": "1", // We are version 1 of ourselves
-            "Implementation-Title": project.name,
-            "Implementation-Version": "${version}",
-            "Implementation-Vendor" :"AdventureG147",
-            "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
-        ])
-    }
+	manifest {
+		attributes([
+				"Specification-Title"     : project.modName,
+				"Specification-Vendor"    : "AdventureG147",
+				"Specification-Version"   : "1", // We are version 1 of ourselves
+				"Implementation-Title"    : project.modName,
+				"Implementation-Vendor"   : "AdventureG147",
+				"Implementation-Version"  : project.modVersion,
+				"Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
+		])
+	}
+}
+
+repositories {
+	maven {
+		name = "Jared's maven"
+		url = "https://maven.blamejared.com/"
+	}
+	maven {
+		name = "CurseForge"
+		url = "https://www.cursemaven.com"
+	}
+	maven {
+		name = "GeckoLib"
+		url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/'
+	}
 }
 
 jar.finalizedBy('reobfJar')
 
 publishing {
-    publications {
-        mavenJava(MavenPublication) {
-            artifact jar
-        }
-    }
+	publications {
+		mavenJava(MavenPublication) {
+			artifact jar
+		}
+	}
 
-    repositories {
-        maven {url = "file:///${project.projectDir}/mcmodsrepo"}
-        maven { url = 'https://maven.parchmentmc.org' }
-    }
+	repositories {
+		maven {url = "file:///${project.projectDir}/mcmodsrepo"}
+	}
 }
